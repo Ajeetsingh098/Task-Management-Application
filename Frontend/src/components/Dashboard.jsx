@@ -6,8 +6,8 @@ import { Plus, Trash2, CheckCircle, Circle, Edit3, Check, X } from 'lucide-react
 const Dashboard = () => {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState({ title: '' });
-    const [editingId, setEditingId] = useState(null); // Track which task is being edited
-    const [editValue, setEditValue] = useState("");   // Track the new text
+    const [editingId, setEditingId] = useState(null); 
+    const [editValue, setEditValue] = useState("");   
     
     const user = JSON.parse(localStorage.getItem('user'));
 

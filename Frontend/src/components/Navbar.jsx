@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { LayoutGrid, LogIn, UserPlus, LogOut } from 'lucide-react';
+import { LayoutGrid, LogIn, LogOut, UserCircle } from 'lucide-react';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -17,57 +17,47 @@ function Navbar() {
     <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 px-6 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
-        {/* LOGO / HOME LINK */}
+        {/* LOGO */}
         <Link to="/" className="flex items-center gap-2 group cursor-pointer">
           <div className="bg-indigo-600 p-1.5 rounded-lg group-hover:bg-indigo-700 transition-colors">
-            <LayoutGrid size={20} className="text-white cursor-pointer" />
+            <LayoutGrid size={20} className="text-white" />
           </div>
-          <span className="text-xl cursor-pointer font-bold text-slate-900 tracking-tight">TaskManager</span>
+          <span className="text-xl font-bold text-slate-900 tracking-tight">TaskManager</span>
         </Link>
 
         {/* NAVIGATION BUTTONS */}
         <div className="flex items-center gap-3">
           {isAuthenticated ? (
-            /*LOGGED IN  */
-            <>
-             
+          
+            <div className="flex items-center gap-4">
+              
               {location.pathname !== '/dashboard' && (
                 <Link
                   to="/dashboard"
-                  className="px-2 py-2 cursor-pointer rounded-xl text-sm font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 transition-all"
+                  className="px-4 py-2 cursor-pointer rounded-xl text-sm font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 transition-all"
                 >
                   Dashboard
                 </Link>
               )}
 
-              {/* <button
+              {/* ALWAYS show Logout button if authenticated */}
+              <button
                 onClick={handleLogout}
-                className="flex cursor-pointer items-center gap-2 px-2 py-2 rounded-xl text-sm font-bold text-slate-500 hover:text-red-600 transition-all"
+                className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-slate-500 hover:text-red-600 hover:bg-red-50 transition-all border border-transparent hover:border-red-100"
               >
                 <LogOut size={18} />
                 Logout
-              </button> */}
-            </>
+              </button>
+            </div>
           ) : (
-
-            /* LOGGED OUT  */
-            <>
-              <Link
-                to="/login"
-                className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 hover:bg-slate-50 transition-all"
-              >
-                <LogIn size={18} />
-                SignIn
-              </Link>
-              
-              {/* <Link
-                to="/signup"
-                className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-100 transition-all"
-              >
-                <UserPlus size={18} />
-                SignUp
-              </Link> */}
-            </>
+            /* --- RENDERED WHEN LOGGED OUT --- */
+            <Link
+              to="/login"
+              className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 hover:bg-slate-50 transition-all"
+            >
+              <LogIn size={18} />
+              SignIn
+            </Link>
           )}
         </div>
       </div>

@@ -1,9 +1,14 @@
 # Task-Management-Application
 
 
-                                        A high-performance, full-stack Task Management tool designed to help users organize their daily workflow. This application features a secure user authentication system and                                          a complete CRUD interface for task handling.
+ A high-performance, full-stack Task Management tool designed to help users organize their daily workflow. This application features a secure user authentication system and a complete CRUD interface for task    handling.
 
  Live Demo:  [task-management-application-1-a5pl.onrender.com](https://task-management-application-1-a5pl.onrender.com/)
+
+<img width="1912" height="999" alt="Screenshot 2026-02-05 161628" src="https://github.com/user-attachments/assets/ae39bf48-1d2c-4377-8751-362745587abc" />
+ <img width="1905" height="938" alt="Screenshot 2026-02-05 161442" src="https://github.com/user-attachments/assets/df08eba0-190f-4404-9827-279c46c25006" />
+<img width="1913" height="1029" alt="Screenshot 2026-02-05 161557" src="https://github.com/user-attachments/assets/ad485c60-ec95-4f51-baa5-3f93c3f6801c" />
+
 
 
  Core Features:-
@@ -86,14 +91,8 @@ Code snippet
                       Backend: npm start
                       Frontend: npm run dev
                       
-          
-
-<img width="1438" height="957" alt="Screenshot 2026-02-05 161519" src="https://github.com/user-attachments/assets/726d354c-9cac-4b77-915e-b2b46d2d0afb" />
-<img width="1905" height="938" alt="Screenshot 2026-02-05 161442" src="https://github.com/user-attachments/assets/df08eba0-190f-4404-9827-279c46c25006" />
-<img width="1913" height="1029" alt="Screenshot 2026-02-05 161557" src="https://github.com/user-attachments/assets/ad485c60-ec95-4f51-baa5-3f93c3f6801c" />
-<img width="1912" height="999" alt="Screenshot 2026-02-05 161628" src="https://github.com/user-attachments/assets/ae39bf48-1d2c-4377-8751-362745587abc" />
 
 
 Author
 
-               Ajeet Singh - GitHub Profile
+               Ajeet Singh
